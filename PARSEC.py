@@ -173,19 +173,19 @@ def vnamegen(x0z0, x1z0, x1z1, x0z1):
 
 # create blocks
 # airfoil to far field
-yCells =   62*3
-yGrading = 200
+yCells =   62*2
+yGrading = 2000
 # https://turbmodels.larc.nasa.gov/naca0012numerics_grids.html
 xCell_total = int(yCells*2/(1.49))
 
 # downstream
 xDCells = int(xCell_total*0.3)
-xDGrading = 100
+xDGrading = 10
 
-xCell_airfoil = int(xCell_total*0.3)
+xCell_airfoil = int(xCell_total*0.7)
 # upstream
 xUCells = int(3*x10 * xCell_airfoil)
-xUleading = 600
+xUleading = 6000
 #xUleading = 400
 leadGrading1= 0.5
 leadGrading2= 0.6

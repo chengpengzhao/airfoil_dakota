@@ -1,0 +1,143 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      nuTilda;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -1 0 0 0 0];
+
+internalField   uniform 3.4321e-05;
+
+boundaryField
+{
+    inlet-l
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    airfoil-l1
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    empty-1
+    {
+        type            empty;
+    }
+    empty-2
+    {
+        type            empty;
+    }
+    wall-l1
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    airfoil-l2
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    empty-3
+    {
+        type            empty;
+    }
+    empty-4
+    {
+        type            empty;
+    }
+    wall-l2
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    outlet-l
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    empty-5
+    {
+        type            empty;
+    }
+    empty-6
+    {
+        type            empty;
+    }
+    outlet-h
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    wall-h2
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    empty-7
+    {
+        type            empty;
+    }
+    empty-8
+    {
+        type            empty;
+    }
+    airfoil-h2
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    wall-h1
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    empty-9
+    {
+        type            empty;
+    }
+    empty-10
+    {
+        type            empty;
+    }
+    inlet-h
+    {
+        type            freestream;
+        freestreamValue uniform 3.4321e-05;
+        value           uniform 3.4321e-05;
+    }
+    airfoil-h1
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    empty-11
+    {
+        type            empty;
+    }
+    empty-12
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

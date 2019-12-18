@@ -1,0 +1,186 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+24
+(
+    inlet-l
+    {
+        type            patch;
+        nFaces          71;
+        startFace       81435;
+    }
+    airfoil-l1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          71;
+        startFace       81506;
+    }
+    empty-1
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          8804;
+        startFace       81577;
+    }
+    empty-2
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          8804;
+        startFace       90381;
+    }
+    wall-l1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          45;
+        startFace       99185;
+    }
+    airfoil-l2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          45;
+        startFace       99230;
+    }
+    empty-3
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          5580;
+        startFace       99275;
+    }
+    empty-4
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          5580;
+        startFace       104855;
+    }
+    wall-l2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          49;
+        startFace       110435;
+    }
+    outlet-l
+    {
+        type            patch;
+        nFaces          124;
+        startFace       110484;
+    }
+    empty-5
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          6076;
+        startFace       110608;
+    }
+    empty-6
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          6076;
+        startFace       116684;
+    }
+    outlet-h
+    {
+        type            patch;
+        nFaces          124;
+        startFace       122760;
+    }
+    wall-h2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          49;
+        startFace       122884;
+    }
+    empty-7
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          6076;
+        startFace       122933;
+    }
+    empty-8
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          6076;
+        startFace       129009;
+    }
+    airfoil-h2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          45;
+        startFace       135085;
+    }
+    wall-h1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          45;
+        startFace       135130;
+    }
+    empty-9
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          5580;
+        startFace       135175;
+    }
+    empty-10
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          5580;
+        startFace       140755;
+    }
+    inlet-h
+    {
+        type            patch;
+        nFaces          71;
+        startFace       146335;
+    }
+    airfoil-h1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          71;
+        startFace       146406;
+    }
+    empty-11
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          8804;
+        startFace       146477;
+    }
+    empty-12
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          8804;
+        startFace       155281;
+    }
+)
+
+// ************************************************************************* //
