@@ -16,9 +16,9 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-//internalField      uniform (51.0527 0 0); //0deg
-//internalField      uniform (50.2771 8.8652 0); //10deg
-internalField      uniform (49.3131 13.2134 0); //15deg
+//internalField      uniform (51.4815 0 0); //0deg
+//internalField      uniform (50.6994 0.00 8.9397); //10deg
+internalField      uniform (49.7273 0.00 13.3244); //15deg
 //Ma=0.15
 boundaryField
 {
