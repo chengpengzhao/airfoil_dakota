@@ -1,0 +1,208 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+26
+(
+    inlet-l
+    {
+        type            patch;
+        nFaces          0;
+        startFace       45693;
+    }
+    airfoil-l1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          0;
+        startFace       45693;
+    }
+    empty-1
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       45693;
+    }
+    empty-2
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       45693;
+    }
+    wall-l1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          0;
+        startFace       45693;
+    }
+    airfoil-l2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          0;
+        startFace       45693;
+    }
+    empty-3
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       45693;
+    }
+    empty-4
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       45693;
+    }
+    wall-l2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          0;
+        startFace       45693;
+    }
+    outlet-l
+    {
+        type            patch;
+        nFaces          59;
+        startFace       45693;
+    }
+    empty-5
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          2935;
+        startFace       45752;
+    }
+    empty-6
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          2935;
+        startFace       48687;
+    }
+    outlet-h
+    {
+        type            patch;
+        nFaces          186;
+        startFace       51622;
+    }
+    wall-h2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          74;
+        startFace       51808;
+    }
+    empty-7
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          13764;
+        startFace       51882;
+    }
+    empty-8
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          13764;
+        startFace       65646;
+    }
+    airfoil-h2
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          34;
+        startFace       79410;
+    }
+    wall-h1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          34;
+        startFace       79444;
+    }
+    empty-9
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          6324;
+        startFace       79478;
+    }
+    empty-10
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          6324;
+        startFace       85802;
+    }
+    inlet-h
+    {
+        type            patch;
+        nFaces          0;
+        startFace       92126;
+    }
+    airfoil-h1
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          0;
+        startFace       92126;
+    }
+    empty-11
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       92126;
+    }
+    empty-12
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       92126;
+    }
+    procBoundary2to1
+    {
+        type            processor;
+        inGroups        List<word> 1(processor);
+        nFaces          133;
+        startFace       92126;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        2;
+        neighbProcNo    1;
+    }
+    procBoundary2to3
+    {
+        type            processor;
+        inGroups        List<word> 1(processor);
+        nFaces          186;
+        startFace       92259;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        2;
+        neighbProcNo    3;
+    }
+)
+
+// ************************************************************************* //

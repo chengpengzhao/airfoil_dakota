@@ -1,0 +1,314 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "1200";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet-l
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    airfoil-l1
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-1
+    {
+        type            empty;
+    }
+    empty-2
+    {
+        type            empty;
+    }
+    wall-l1
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    airfoil-l2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-3
+    {
+        type            empty;
+    }
+    empty-4
+    {
+        type            empty;
+    }
+    wall-l2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    outlet-l
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-5
+    {
+        type            empty;
+    }
+    empty-6
+    {
+        type            empty;
+    }
+    outlet-h
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    wall-h2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-7
+    {
+        type            empty;
+    }
+    empty-8
+    {
+        type            empty;
+    }
+    airfoil-h2
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+33
+(
+30.6848
+30.3112
+29.9766
+29.6641
+29.3612
+29.0723
+28.8024
+28.5447
+28.2944
+28.0513
+27.8193
+27.5983
+27.3812
+27.1706
+26.9657
+26.7661
+26.5735
+26.3851
+26.1953
+26.0113
+25.833
+25.6546
+25.4787
+25.3069
+25.1356
+24.964
+24.7956
+24.6262
+24.4594
+24.2907
+24.1215
+23.9546
+23.7842
+)
+;
+    }
+    wall-h1
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+33
+(
+142.067
+142.079
+142.008
+141.953
+141.911
+141.871
+141.829
+141.785
+141.742
+141.7
+141.658
+141.618
+141.575
+141.539
+141.498
+141.46
+141.418
+141.384
+141.342
+141.306
+141.265
+141.232
+141.195
+141.154
+141.125
+141.085
+141.054
+141.017
+140.979
+140.951
+140.912
+140.882
+140.848
+)
+;
+    }
+    empty-9
+    {
+        type            empty;
+    }
+    empty-10
+    {
+        type            empty;
+    }
+    inlet-h
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    airfoil-h1
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+91
+(
+26.3087
+26.0508
+25.8212
+25.6301
+25.4652
+25.3163
+25.1818
+25.0691
+24.9859
+24.9225
+24.8637
+24.8348
+24.8224
+24.8129
+24.8099
+24.8168
+24.8362
+24.8642
+24.902
+24.9395
+24.991
+25.0511
+25.1211
+25.193
+25.2689
+25.3494
+25.4381
+25.5277
+25.6279
+25.7274
+25.832
+25.9356
+26.0406
+26.1587
+26.2738
+26.3861
+26.5045
+26.6232
+26.7433
+26.8695
+26.995
+27.1197
+27.2407
+27.3652
+27.4921
+27.6184
+27.7393
+27.8664
+27.9901
+28.1146
+28.2444
+28.3651
+28.4811
+28.6076
+28.7274
+28.8403
+28.9546
+29.0746
+29.1898
+29.301
+29.4077
+29.5151
+29.6233
+29.7182
+29.8184
+29.9163
+30.0087
+30.096
+30.1834
+30.2668
+30.3517
+30.4258
+30.4959
+30.5648
+30.6374
+30.6977
+30.7543
+30.8001
+30.847
+30.8865
+30.9209
+30.9533
+30.9774
+30.9952
+31.0066
+31.0167
+31.0091
+30.9978
+30.9817
+30.9538
+30.9166
+)
+;
+    }
+    empty-11
+    {
+        type            empty;
+    }
+    empty-12
+    {
+        type            empty;
+    }
+    procBoundary3to0
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary3to2
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

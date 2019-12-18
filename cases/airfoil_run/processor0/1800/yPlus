@@ -1,0 +1,276 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "1800";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet-l
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    airfoil-l1
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+107
+(
+32.3243
+31.5817
+30.5724
+29.3696
+28.0538
+26.6923
+25.3376
+24.0257
+22.7797
+21.6092
+20.519
+19.5035
+18.5509
+17.6636
+16.8342
+16.0465
+15.2864
+14.5568
+13.8528
+13.1894
+12.5861
+12.0302
+11.5061
+11.0052
+10.5247
+10.0626
+9.61244
+9.17521
+8.74699
+8.3203
+7.89838
+7.47381
+7.03989
+6.59894
+6.1415
+5.66301
+5.15374
+4.59942
+3.98086
+3.25824
+2.33146
+0.568342
+2.18362
+3.13754
+3.86303
+4.47132
+5.00648
+5.49246
+5.94147
+6.36201
+6.75776
+7.1375
+7.50148
+7.85147
+8.19216
+8.52282
+8.84603
+9.16575
+9.48164
+9.79245
+10.1019
+10.4095
+10.7178
+11.0258
+11.3368
+11.6529
+11.9733
+12.3056
+12.6493
+13
+13.3588
+13.7082
+14.0469
+14.3688
+14.6824
+14.9798
+15.2646
+15.5412
+15.8105
+16.0716
+16.3237
+16.572
+16.813
+17.0473
+17.2795
+17.5076
+17.7255
+17.9401
+18.1512
+18.3552
+18.5571
+18.7522
+18.9427
+19.1254
+19.3021
+19.4787
+19.6452
+19.8073
+19.9638
+20.1162
+20.259
+20.3966
+20.5283
+20.6542
+20.7734
+20.8809
+20.9863
+)
+;
+    }
+    empty-1
+    {
+        type            empty;
+    }
+    empty-2
+    {
+        type            empty;
+    }
+    wall-l1
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    airfoil-l2
+    {
+        type            calculated;
+        value           uniform 21.2287;
+    }
+    empty-3
+    {
+        type            empty;
+    }
+    empty-4
+    {
+        type            empty;
+    }
+    wall-l2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    outlet-l
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-5
+    {
+        type            empty;
+    }
+    empty-6
+    {
+        type            empty;
+    }
+    outlet-h
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    wall-h2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-7
+    {
+        type            empty;
+    }
+    empty-8
+    {
+        type            empty;
+    }
+    airfoil-h2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    wall-h1
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-9
+    {
+        type            empty;
+    }
+    empty-10
+    {
+        type            empty;
+    }
+    inlet-h
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    airfoil-h1
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+16
+(
+32.797
+33.0806
+33.1475
+32.9211
+32.4697
+31.892
+31.2679
+30.6455
+30.0404
+29.4641
+28.9357
+28.4533
+28.0073
+27.6018
+27.2343
+26.902
+)
+;
+    }
+    empty-11
+    {
+        type            empty;
+    }
+    empty-12
+    {
+        type            empty;
+    }
+    procBoundary0to1
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary0to3
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

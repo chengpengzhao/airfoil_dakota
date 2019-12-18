@@ -1,0 +1,299 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "1800";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet-l
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    airfoil-l1
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-1
+    {
+        type            empty;
+    }
+    empty-2
+    {
+        type            empty;
+    }
+    wall-l1
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    airfoil-l2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-3
+    {
+        type            empty;
+    }
+    empty-4
+    {
+        type            empty;
+    }
+    wall-l2
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    outlet-l
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    empty-5
+    {
+        type            empty;
+    }
+    empty-6
+    {
+        type            empty;
+    }
+    outlet-h
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    wall-h2
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+74
+(
+144.097
+144.223
+144.364
+144.502
+144.647
+144.804
+144.974
+145.155
+145.346
+145.55
+145.766
+145.995
+146.237
+146.493
+146.763
+147.046
+147.345
+147.659
+147.987
+148.33
+148.69
+149.066
+149.458
+149.866
+150.29
+150.731
+151.189
+151.662
+152.151
+152.655
+153.174
+153.708
+154.257
+154.82
+155.395
+155.984
+156.584
+157.196
+157.817
+158.447
+159.084
+159.728
+160.377
+161.029
+161.684
+162.338
+162.991
+163.64
+164.285
+164.923
+165.552
+166.17
+166.774
+167.362
+167.932
+168.482
+169.009
+169.51
+169.984
+170.426
+170.834
+171.204
+171.534
+171.819
+172.053
+172.23
+172.341
+172.375
+172.315
+172.144
+171.806
+171.395
+170.376
+171.687
+)
+;
+    }
+    empty-7
+    {
+        type            empty;
+    }
+    empty-8
+    {
+        type            empty;
+    }
+    airfoil-h2
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+34
+(
+23.9341
+23.7517
+23.5703
+23.3871
+23.1995
+23.0119
+22.8219
+22.6265
+22.4278
+22.2237
+22.0192
+21.8126
+21.5962
+21.3741
+21.1456
+20.9119
+20.6702
+20.4193
+20.1563
+19.882
+19.5976
+19.2971
+18.9828
+18.6507
+18.298
+17.9235
+17.5273
+17.0977
+16.6541
+16.1431
+15.6822
+14.995
+14.78
+12.9911
+)
+;
+    }
+    wall-h1
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+34
+(
+144.011
+144.01
+144.001
+144.001
+143.991
+143.991
+143.983
+143.985
+143.979
+143.981
+143.974
+143.978
+143.972
+143.977
+143.972
+143.976
+143.973
+143.979
+143.975
+143.981
+143.981
+143.981
+143.987
+143.986
+143.996
+143.996
+144.003
+144.006
+144.015
+144.018
+144.027
+144.029
+144.04
+144.045
+)
+;
+    }
+    empty-9
+    {
+        type            empty;
+    }
+    empty-10
+    {
+        type            empty;
+    }
+    inlet-h
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    airfoil-h1
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    empty-11
+    {
+        type            empty;
+    }
+    empty-12
+    {
+        type            empty;
+    }
+    procBoundary2to1
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary2to3
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

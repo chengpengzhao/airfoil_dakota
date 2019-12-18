@@ -17,8 +17,8 @@ cd cases/airfoil_run;
 blockMesh;
 checkMesh;
 renumberMesh -overwrite;
-paraFoam 
-#decomposePar;
-#mpirun -np 4 simpleFoam -parallel | tee solve.log;
-#reconstructPar -constant;
-#pyFoamPlotWatcher.py --progress solve.log;
+#paraFoam 
+decomposePar;
+mpirun -np 4 simpleFoam -parallel | tee solve.log;
+reconstructPar -constant;
+pyFoamPlotWatcher.py --progress solve.log;
