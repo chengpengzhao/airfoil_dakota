@@ -29,7 +29,7 @@ forceCoeffs
     log         true;
     rhoInf      1;  //for compressible cases 	
     // Reference pressure [Pa]
-    pRef            0;
+    pRef            1e5;
 
     // Include porosity effects?
     porosity        false;
@@ -52,7 +52,7 @@ forceCoeffs
     pitchAxis       (0 0 1);
 
     // Freestream velocity magnitude [m/s]
-    magUInf         51.4815;
+    magUInf         51.0527;
 
     // Reference length [m]z
     lRef            1;

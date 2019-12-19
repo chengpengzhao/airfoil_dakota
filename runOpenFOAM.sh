@@ -19,6 +19,6 @@ checkMesh;
 renumberMesh -overwrite;
 #paraFoam 
 decomposePar;
-mpirun -np 4 simpleFoam -parallel | tee solve.log;
+mpirun --allow-run-as-root -np 12 simpleFoam -parallel | tee solve.log;
 reconstructPar -constant;
 pyFoamPlotWatcher.py --progress solve.log;

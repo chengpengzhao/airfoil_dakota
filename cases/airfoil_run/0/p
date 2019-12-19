@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  7
+    \\  /    A nd           | Version:  dev
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -17,16 +17,16 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform 100000;
 
 boundaryField
 {
     inlet-l
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     airfoil-l1
     {
@@ -43,9 +43,9 @@ boundaryField
     wall-l1
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     airfoil-l2
     {
@@ -62,16 +62,16 @@ boundaryField
     wall-l2
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     outlet-l
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     empty-5
     {
@@ -84,16 +84,16 @@ boundaryField
     outlet-h
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     wall-h2
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     empty-7
     {
@@ -110,9 +110,9 @@ boundaryField
     wall-h1
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     empty-9
     {
@@ -125,9 +125,9 @@ boundaryField
     inlet-h
     {
         type            freestreamPressure;
-        freestreamValue uniform 0;
+        freestreamValue uniform 100000;
         supersonic      0;
-        value           uniform 0;
+        value           uniform 100000;
     }
     airfoil-h1
     {

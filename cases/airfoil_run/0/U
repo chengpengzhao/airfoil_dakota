@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  7
+    \\  /    A nd           | Version:  dev
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -17,15 +17,15 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (49.7273 13.3244 0);
+internalField   uniform (49.3131 13.2134 0);
 
 boundaryField
 {
     inlet-l
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     airfoil-l1
     {
@@ -42,8 +42,8 @@ boundaryField
     wall-l1
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     airfoil-l2
     {
@@ -60,14 +60,14 @@ boundaryField
     wall-l2
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     outlet-l
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     empty-5
     {
@@ -80,14 +80,14 @@ boundaryField
     outlet-h
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     wall-h2
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     empty-7
     {
@@ -104,8 +104,8 @@ boundaryField
     wall-h1
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     empty-9
     {
@@ -118,8 +118,8 @@ boundaryField
     inlet-h
     {
         type            freestreamVelocity;
-        freestreamValue uniform (49.7273 13.3244 0);
-        value           uniform (49.7273 13.3244 0);
+        freestreamValue uniform (49.3131 13.2134 0);
+        value           uniform (49.3131 13.2134 0);
     }
     airfoil-h1
     {

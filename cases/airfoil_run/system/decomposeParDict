@@ -19,16 +19,16 @@ FoamFile
 numberOfSubdomains 4;
 
 //- The decomposition method (mandatory)
-method          scotch;
+//method          scotch;
 // method          hierarchical;
-//method          simple;
+method          simple;
 // method          metis;
 // method          manual;
 // method          multiLevel;
 // method          structured;  // does 2D decomposition of structured mesh
-//simpleCoeffs
-//{
-//    n           (2 2 1);
-//    delta       0.001;  //< default value = 0.001
-//}
+simpleCoeffs
+{
+    n           (2 2 1);
+    delta       0.001;  //< default value = 0.001
+}
 

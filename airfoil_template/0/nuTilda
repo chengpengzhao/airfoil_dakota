@@ -29,8 +29,8 @@ boundaryField
     airfoil-l1
     {
         //type            nutUWallFunction;
-        //type            nutUSpaldingWallFunction;
-        type            fixedValue;
+        type            nutUSpaldingWallFunction;
+        //type            fixedValue;
         value           uniform 0;
     }
     empty-1
@@ -49,9 +49,9 @@ boundaryField
     airfoil-l2
     {
         //type            nutUWallFunction;
-        //type            nutUSpaldingWallFunction;
-        type            fixedValue;
-        value           uniform 0;
+        type            nutUSpaldingWallFunction;
+        //type            fixedValue;
+         value           uniform 0;
 }
     empty-3
     {
@@ -100,8 +100,8 @@ boundaryField
     airfoil-h2
     {
         //type            nutUWallFunction;
-        //type            nutUSpaldingWallFunction;
-        type            fixedValue;
+        type            nutUSpaldingWallFunction;
+        //type            fixedValue;
         value           uniform 0;
     }
     wall-h1
@@ -125,8 +125,8 @@ boundaryField
     airfoil-h1
     {
         //type            nutUWallFunction;
-        //type            nutUSpaldingWallFunction;
-        type            fixedValue;
+        type            nutUSpaldingWallFunction;
+        //type            fixedValue;
         value           uniform 0;
 }
     empty-11
