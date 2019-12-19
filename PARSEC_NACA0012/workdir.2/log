@@ -1,0 +1,495 @@
+Making ./cases/airfoil_run case directory
+Copying directories from airfoil_template/ to ./cases/airfoil_run:
+airfoil_template//system to ... system
+airfoil_template//constant to ... constant
+airfoil_template//0 to ... 0
+Copying scripts from airfoil_template/ to ./cases/airfoil_run:
+airfoil_template/Allclean to ... Allclean
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-ca808c8420bf
+Exec   : blockMesh
+Date   : Dec 19 2019
+Time   : 17:30:20
+Host   : "iZ6wej1artv0n1hqcx94jpZ"
+PID    : 27451
+I/O    : uncollated
+Case   : /root/OpenFOAM/root-7/run/airfoil_opt/PARSEC_NACA0012/workdir.2/cases/airfoil_run
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "/root/OpenFOAM/root-7/run/airfoil_opt/PARSEC_NACA0012/workdir.2/cases/airfoil_run/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 6
+		Number of boundary faces : 24
+		Number of defined boundary faces : 24
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.1683 .. 0.336594 0.162545 .. 0.325201 0.1683 .. 0.336594 0.162545 .. 0.325201 
+        j : 0.526336 .. 0.000657921 0.52625 .. 0.000658722 0.526336 .. 0.000657921 0.52625 .. 0.000658722 
+        k : 0.01
+    Block 1 cell size :
+        i : 0.0134882 .. 0.00809293 0.0135002 .. 0.00783119 0.0134882 .. 0.00809293 0.0135002 .. 0.00783119 
+        j : 0.494753 .. 0.000989506 0.494725 .. 0.00098945 0.494753 .. 0.000989506 0.494725 .. 0.00098945 
+        k : 0.01
+    Block 2 cell size :
+        i : 0.0515721 .. 0.515721
+        j : 0.496478 .. 0.000992956
+        k : 0.01
+    Block 3 cell size :
+        i : 0.0515721 .. 0.515721
+        j : 0.000992956 .. 0.496478
+        k : 0.01
+    Block 4 cell size :
+        i : 0.0138086 .. 0.00930955 0.0138086 .. 0.00930894 0.0138086 .. 0.00930955 0.0138086 .. 0.00930894 
+        j : 0.000989883 .. 0.494942 0.000989846 .. 0.494923 0.000989883 .. 0.494942 0.000989846 .. 0.494923 
+        k : 0.01
+    Block 5 cell size :
+        i : 0.526336 .. 0.000657921 0.52625 .. 0.000658723 0.526336 .. 0.000657921 0.52625 .. 0.000658723 
+        j : 0.1683 .. 0.336594 0.162545 .. 0.3252 0.1683 .. 0.336594 0.162545 .. 0.3252 
+        k : 0.01
+
+Adding cell zones
+    0	b0
+    1	b1
+    2	b2
+    3	b3
+    4	b4
+    5	b5
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-14.8135 -15 0) (16 15 0.01)
+  nPoints: 185728
+  nCells: 92256
+  nFaces: 369632
+  nInternalFaces: 183904
+----------------
+Patches
+----------------
+  patch 0 (start: 183904 size: 97) name: inlet-l
+  patch 1 (start: 184001 size: 97) name: airfoil-l1
+  patch 2 (start: 184098 size: 18042) name: empty-1
+  patch 3 (start: 202140 size: 18042) name: empty-2
+  patch 4 (start: 220182 size: 77) name: wall-l1
+  patch 5 (start: 220259 size: 77) name: airfoil-l2
+  patch 6 (start: 220336 size: 14322) name: empty-3
+  patch 7 (start: 234658 size: 14322) name: empty-4
+  patch 8 (start: 248980 size: 74) name: wall-l2
+  patch 9 (start: 249054 size: 186) name: outlet-l
+  patch 10 (start: 249240 size: 13764) name: empty-5
+  patch 11 (start: 263004 size: 13764) name: empty-6
+  patch 12 (start: 276768 size: 186) name: outlet-h
+  patch 13 (start: 276954 size: 74) name: wall-h2
+  patch 14 (start: 277028 size: 13764) name: empty-7
+  patch 15 (start: 290792 size: 13764) name: empty-8
+  patch 16 (start: 304556 size: 77) name: airfoil-h2
+  patch 17 (start: 304633 size: 77) name: wall-h1
+  patch 18 (start: 304710 size: 14322) name: empty-9
+  patch 19 (start: 319032 size: 14322) name: empty-10
+  patch 20 (start: 333354 size: 97) name: inlet-h
+  patch 21 (start: 333451 size: 97) name: airfoil-h1
+  patch 22 (start: 333548 size: 18042) name: empty-11
+  patch 23 (start: 351590 size: 18042) name: empty-12
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-ca808c8420bf
+Exec   : renumberMesh -overwrite
+Date   : Dec 19 2019
+Time   : 17:30:21
+Host   : "iZ6wej1artv0n1hqcx94jpZ"
+PID    : 27452
+I/O    : uncollated
+Case   : /root/OpenFOAM/root-7/run/airfoil_opt/PARSEC_NACA0012/workdir.2/cases/airfoil_run
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Mesh size: 92256
+Before renumbering :
+    band           : 74214
+    profile        : 3.42583e+07
+
+Using default renumberMethod.
+
+Selecting renumberMethod CuthillMcKee
+
+Reading geometric fields
+
+Reading volScalarField p
+Reading volScalarField nuTilda
+Reading volScalarField nut
+Reading volVectorField U
+
+After renumbering :
+    band           : 373
+    profile        : 2.57616e+07
+
+Writing mesh to "constant"
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-ca808c8420bf
+Exec   : decomposePar
+Date   : Dec 19 2019
+Time   : 17:30:22
+Host   : "iZ6wej1artv0n1hqcx94jpZ"
+PID    : 27453
+I/O    : uncollated
+Case   : /root/OpenFOAM/root-7/run/airfoil_opt/PARSEC_NACA0012/workdir.2/cases/airfoil_run
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+ Foam::decompositionMethod::New 
+{
+    numberOfSubdomains 12;
+    method          scotch;
+}
+
+Selecting decompositionMethod scotch
+
+Finished decomposition in 0.13 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 7688
+    Number of faces shared with processor 1 = 43
+    Number of faces shared with processor 2 = 73
+    Number of faces shared with processor 4 = 70
+    Number of faces shared with processor 10 = 63
+    Number of faces shared with processor 11 = 10
+    Number of processor patches = 5
+    Number of processor faces = 259
+    Number of boundary faces = 15483
+
+Processor 1
+    Number of cells = 7644
+    Number of faces shared with processor 0 = 43
+    Number of faces shared with processor 2 = 113
+    Number of faces shared with processor 9 = 70
+    Number of faces shared with processor 11 = 78
+    Number of processor patches = 4
+    Number of processor faces = 304
+    Number of boundary faces = 15360
+
+Processor 2
+    Number of cells = 7726
+    Number of faces shared with processor 0 = 73
+    Number of faces shared with processor 1 = 113
+    Number of faces shared with processor 3 = 69
+    Number of faces shared with processor 4 = 55
+    Number of processor patches = 4
+    Number of processor faces = 310
+    Number of boundary faces = 15514
+
+Processor 3
+    Number of cells = 7688
+    Number of faces shared with processor 2 = 69
+    Number of faces shared with processor 4 = 65
+    Number of faces shared with processor 5 = 64
+    Number of faces shared with processor 6 = 81
+    Number of processor patches = 4
+    Number of processor faces = 279
+    Number of boundary faces = 15483
+
+Processor 4
+    Number of cells = 7631
+    Number of faces shared with processor 0 = 70
+    Number of faces shared with processor 2 = 55
+    Number of faces shared with processor 3 = 65
+    Number of faces shared with processor 5 = 127
+    Number of processor patches = 4
+    Number of processor faces = 317
+    Number of boundary faces = 15321
+
+Processor 5
+    Number of cells = 7697
+    Number of faces shared with processor 3 = 64
+    Number of faces shared with processor 4 = 127
+    Number of processor patches = 2
+    Number of processor faces = 191
+    Number of boundary faces = 15585
+
+Processor 6
+    Number of cells = 7749
+    Number of faces shared with processor 3 = 81
+    Number of faces shared with processor 7 = 67
+    Number of faces shared with processor 8 = 60
+    Number of faces shared with processor 9 = 62
+    Number of processor patches = 4
+    Number of processor faces = 270
+    Number of boundary faces = 15618
+
+Processor 7
+    Number of cells = 7688
+    Number of faces shared with processor 6 = 67
+    Number of faces shared with processor 8 = 126
+    Number of processor patches = 2
+    Number of processor faces = 193
+    Number of boundary faces = 15561
+
+Processor 8
+    Number of cells = 7688
+    Number of faces shared with processor 6 = 60
+    Number of faces shared with processor 7 = 126
+    Number of faces shared with processor 9 = 11
+    Number of faces shared with processor 10 = 50
+    Number of faces shared with processor 11 = 66
+    Number of processor patches = 5
+    Number of processor faces = 313
+    Number of boundary faces = 15437
+
+Processor 9
+    Number of cells = 7685
+    Number of faces shared with processor 1 = 70
+    Number of faces shared with processor 6 = 62
+    Number of faces shared with processor 8 = 11
+    Number of faces shared with processor 11 = 107
+    Number of processor patches = 4
+    Number of processor faces = 250
+    Number of boundary faces = 15480
+
+Processor 10
+    Number of cells = 7684
+    Number of faces shared with processor 0 = 63
+    Number of faces shared with processor 8 = 50
+    Number of faces shared with processor 11 = 149
+    Number of processor patches = 3
+    Number of processor faces = 262
+    Number of boundary faces = 15510
+
+Processor 11
+    Number of cells = 7688
+    Number of faces shared with processor 0 = 10
+    Number of faces shared with processor 1 = 78
+    Number of faces shared with processor 8 = 66
+    Number of faces shared with processor 9 = 107
+    Number of faces shared with processor 10 = 149
+    Number of processor patches = 5
+    Number of processor faces = 410
+    Number of boundary faces = 15376
+
+Number of processor faces = 1679
+Max number of cells = 7749 (0.793444% above average 7688)
+Max number of processor patches = 5 (30.4348% above average 3.83333)
+Max number of faces between processors = 410 (46.5158% above average 279.833)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+Processor 6: field transfer
+Processor 7: field transfer
+Processor 8: field transfer
+Processor 9: field transfer
+Processor 10: field transfer
+Processor 11: field transfer
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-ca808c8420bf
+Exec   : simpleFoam -parallel
+Date   : Dec 19 2019
+Time   : 17:30:25
+Host   : "iZ6wej1artv0n1hqcx94jpZ"
+PID    : 27460
+I/O    : uncollated
+Case   : /root/OpenFOAM/root-7/run/airfoil_opt/PARSEC_NACA0012/workdir.2/cases/airfoil_run
+nProcs : 12
+Slaves : 
+11
+(
+"iZ6wej1artv0n1hqcx94jpZ.27461"
+"iZ6wej1artv0n1hqcx94jpZ.27462"
+"iZ6wej1artv0n1hqcx94jpZ.27463"
+"iZ6wej1artv0n1hqcx94jpZ.27464"
+"iZ6wej1artv0n1hqcx94jpZ.27465"
+"iZ6wej1artv0n1hqcx94jpZ.27466"
+"iZ6wej1artv0n1hqcx94jpZ.27467"
+"iZ6wej1artv0n1hqcx94jpZ.27468"
+"iZ6wej1artv0n1hqcx94jpZ.27469"
+"iZ6wej1artv0n1hqcx94jpZ.27470"
+"iZ6wej1artv0n1hqcx94jpZ.27471"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 1e-06
+        U: tolerance 1e-06
+        nuTilda: tolerance 1e-06
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model SpalartAllmaras
+Selecting patchDistMethod meshWave
+[iZ6wej1artv0n1hqcx94jpZ:27463] *** Process received signal ***
+[iZ6wej1artv0n1hqcx94jpZ:27463] Signal: Floating point exception (8)
+[iZ6wej1artv0n1hqcx94jpZ:27463] Signal code:  (-6)
+[iZ6wej1artv0n1hqcx94jpZ:27463] Failing at address: 0x6b47
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7fc106022f20]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7fc106022e97]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 2] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7fc106022f20]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 3] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZN4Foam6divideERNS_5FieldIdEERKdRKNS_5UListIdEE+0x144)[0x7fc10760a524]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 4] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZN4FoamdvERKdRKNS_3tmpINS_5FieldIdEEEE+0x94)[0x7fc107616aa4]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 5] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZNK4Foam20surfaceInterpolation15makeDeltaCoeffsEv+0x3ef)[0x7fc10981e4ff]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 6] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZNK4Foam20surfaceInterpolation11deltaCoeffsEv+0x19)[0x7fc10981ebc9]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 7] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam8RASModelINS_29IncompressibleTurbulenceModelINS_14transportModelEEEEC1ERKNS_4wordERKNS_17geometricOneFieldESA_RKNS_14GeometricFieldINS_6VectorIdEENS_12fvPatchFieldENS_7volMeshEEERKNSB_IdNS_13fvsPatchFieldENS_11surfaceMeshEEESN_RKS2_S7_+0x341)[0x7fc10ae2d631]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 8] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam13eddyViscosityINS_8RASModelINS_29IncompressibleTurbulenceModelINS_14transportModelEEEEEEC1ERKNS_4wordERKNS_17geometricOneFieldESC_RKNS_14GeometricFieldINS_6VectorIdEENS_12fvPatchFieldENS_7volMeshEEERKNSD_IdNS_13fvsPatchFieldENS_11surfaceMeshEEESP_RKS3_S9_+0x3e)[0x7fc10ae2d80e]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [ 9] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam9RASModels15SpalartAllmarasINS_29IncompressibleTurbulenceModelINS_14transportModelEEEEC1ERKNS_17geometricOneFieldES8_RKNS_14GeometricFieldINS_6VectorIdEENS_12fvPatchFieldENS_7volMeshEEERKNS9_IdNS_13fvsPatchFieldENS_11surfaceMeshEEESL_RKS3_RKNS_4wordESQ_+0x54)[0x7fc10ae2daa4]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [10] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam8RASModelINS_29IncompressibleTurbulenceModelINS_14transportModelEEEE31adddictionaryConstructorToTableINS_9RASModels15SpalartAllmarasIS3_EEE3NewERKNS_17geometricOneFieldESC_RKNS_14GeometricFieldINS_6VectorIdEENS_12fvPatchFieldENS_7volMeshEEERKNSD_IdNS_13fvsPatchFieldENS_11surfaceMeshEEESP_RKS2_RKNS_4wordE+0x5b)[0x7fc10ae2e38b]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [11] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam8RASModelINS_29IncompressibleTurbulenceModelINS_14transportModelEEEE3NewERKNS_17geometricOneFieldES7_RKNS_14GeometricFieldINS_6VectorIdEENS_12fvPatchFieldENS_7volMeshEEERKNS8_IdNS_13fvsPatchFieldENS_11surfaceMeshEEESK_RKS2_RKNS_4wordE+0x395)[0x7fc10adb2c75]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [12] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam15TurbulenceModelINS_17geometricOneFieldES1_NS_29incompressibleTurbulenceModelENS_14transportModelEE31adddictionaryConstructorToTableINS_8RASModelINS_29IncompressibleTurbulenceModelIS3_EEEEE18NewTurbulenceModelERKS1_SC_RKNS_14GeometricFieldINS_6VectorIdEENS_12fvPatchFieldENS_7volMeshEEERKNSD_IdNS_13fvsPatchFieldENS_11surfaceMeshEEESP_RKS3_RKNS_4wordE+0x28)[0x7fc10adb2eb8]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [13] simpleFoam(+0x6fe35)[0x55f9f4369e35]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [14] simpleFoam(+0x25b25)[0x55f9f431fb25]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [15] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7fc106005b97]
+[iZ6wej1artv0n1hqcx94jpZ:27463] [16] simpleFoam(+0x27f7a)[0x55f9f4321f7a]
+[iZ6wej1artv0n1hqcx94jpZ:27463] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 0 on node iZ6wej1artv0n1hqcx94jpZ exited on signal 8 (Floating point exception).
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-ca808c8420bf
+Exec   : reconstructPar -constant
+Date   : Dec 19 2019
+Time   : 17:30:26
+Host   : "iZ6wej1artv0n1hqcx94jpZ"
+PID    : 27536
+I/O    : uncollated
+Case   : /root/OpenFOAM/root-7/run/airfoil_opt/PARSEC_NACA0012/workdir.2/cases/airfoil_run
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Reconstructing fields for mesh region0
+
+Time = constant
+
+Reconstructing FV fields
+
+No FV fields
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+
+End
+

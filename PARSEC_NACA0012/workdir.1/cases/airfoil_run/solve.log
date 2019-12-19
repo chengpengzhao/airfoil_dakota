@@ -1,0 +1,192 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-ca808c8420bf
+Exec   : simpleFoam -parallel
+Date   : Dec 19 2019
+Time   : 17:30:16
+Host   : "iZ6wej1artv0n1hqcx94jpZ"
+PID    : 27305
+I/O    : uncollated
+Case   : /root/OpenFOAM/root-7/run/airfoil_opt/PARSEC_NACA0012/workdir.1/cases/airfoil_run
+nProcs : 12
+Slaves : 
+11
+(
+"iZ6wej1artv0n1hqcx94jpZ.27306"
+"iZ6wej1artv0n1hqcx94jpZ.27307"
+"iZ6wej1artv0n1hqcx94jpZ.27308"
+"iZ6wej1artv0n1hqcx94jpZ.27309"
+"iZ6wej1artv0n1hqcx94jpZ.27310"
+"iZ6wej1artv0n1hqcx94jpZ.27311"
+"iZ6wej1artv0n1hqcx94jpZ.27312"
+"iZ6wej1artv0n1hqcx94jpZ.27313"
+"iZ6wej1artv0n1hqcx94jpZ.27314"
+"iZ6wej1artv0n1hqcx94jpZ.27315"
+"iZ6wej1artv0n1hqcx94jpZ.27316"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 1e-06
+        U: tolerance 1e-06
+        nuTilda: tolerance 1e-06
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model SpalartAllmaras
+Selecting patchDistMethod meshWave
+RAS
+{
+    RASModel        SpalartAllmaras;
+    turbulence      on;
+    printCoeffs     on;
+    sigmaNut        0.66666;
+    kappa           0.41;
+    Cb1             0.1355;
+    Cb2             0.622;
+    Cw2             0.3;
+    Cw3             2;
+    Cv1             7.1;
+    Cs              0.3;
+}
+
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+forces forceCoeffs:
+    Not including porosity effects
+forceCoeffs forceCoeffs:
+    Not including porosity effects
+Time = 1
+
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 0.00607363, No Iterations 18
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 0.00722291, No Iterations 16
+DICPBiCGStab:  Solving for p, Initial residual = 1, Final residual = 0.0098005, No Iterations 214
+DICPBiCGStab:  Solving for p, Initial residual = 0.233653, Final residual = 0.00145482, No Iterations 166
+DICPBiCGStab:  Solving for p, Initial residual = 0.886751, Final residual = 0.0088142, No Iterations 96
+time step continuity errors : sum local = 77.4017, global = 3.54461, cumulative = 3.54461
+smoothSolver:  Solving for nuTilda, Initial residual = 1, Final residual = 0.00517255, No Iterations 10
+ExecutionTime = 0.44 s  ClockTime = 0 s
+
+forceCoeffs forceCoeffs write:
+    Cm    = 103741
+    Cd    = 3.40833e+07
+    Cl    = -177503
+    Cl(f) = 14989.2
+    Cl(r) = -192492
+
+Time = 2
+
+smoothSolver:  Solving for Ux, Initial residual = 0.879586, Final residual = 0.00459652, No Iterations 12
+smoothSolver:  Solving for Uy, Initial residual = 0.873866, Final residual = 0.0046282, No Iterations 12
+DICPBiCGStab:  Solving for p, Initial residual = 0.990637, Final residual = 0.00945022, No Iterations 101
+DICPBiCGStab:  Solving for p, Initial residual = 9.98718e-06, Final residual = 9.98718e-06, No Iterations 0
+DICPBiCGStab:  Solving for p, Initial residual = 9.98718e-06, Final residual = 9.98718e-06, No Iterations 0
+time step continuity errors : sum local = 2.60372e+10, global = 141172, cumulative = 141176
+smoothSolver:  Solving for nuTilda, Initial residual = 0.920051, Final residual = 0.00759635, No Iterations 38
+bounding nuTilda, min: -5.21123 max: 7.03588e+08 average: 35723.6
+ExecutionTime = 0.52 s  ClockTime = 0 s
+
+forceCoeffs forceCoeffs write:
+    Cm    = -1.57685e+15
+    Cd    = -2.73947e+17
+    Cl    = 6.58134e+13
+    Cl(f) = -1.54394e+15
+    Cl(r) = 1.60975e+15
+
+Time = 3
+
+smoothSolver:  Solving for Ux, Initial residual = 0.952365, Final residual = 0.00122873, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.952595, Final residual = 0.0011864, No Iterations 4
+DICPBiCGStab:  Solving for p, Initial residual = 0.691903, Final residual = 0.00420761, No Iterations 320
+DICPBiCGStab:  Solving for p, Initial residual = 1.72762e-08, Final residual = 1.72762e-08, No Iterations 0
+DICPBiCGStab:  Solving for p, Initial residual = 1.72762e-08, Final residual = 1.72762e-08, No Iterations 0
+time step continuity errors : sum local = 1.41429e+14, global = -2.73445e+09, cumulative = -2.73431e+09
+smoothSolver:  Solving for nuTilda, Initial residual = 0.610265, Final residual = 0.0043996, No Iterations 14
+bounding nuTilda, min: -7.53113e+07 max: 7.1221e+13 average: 8.14623e+09
+ExecutionTime = 0.7 s  ClockTime = 0 s
+
+forceCoeffs forceCoeffs write:
+    Cm    = 6.34447e+25
+    Cd    = 1.06871e+28
+    Cl    = 2.30761e+22
+    Cl(f) = 6.34563e+25
+    Cl(r) = -6.34332e+25
+
+Time = 4
+
+smoothSolver:  Solving for Ux, Initial residual = 0.704891, Final residual = 0.00306671, No Iterations 10
+smoothSolver:  Solving for Uy, Initial residual = 0.960264, Final residual = 0.00263019, No Iterations 18
+DICPBiCGStab:  Solving for p, Initial residual = 0.947337, Final residual = 0.00918791, No Iterations 273
+DICPBiCGStab:  Solving for p, Initial residual = 0.965423, Final residual = 0.00673928, No Iterations 1
+DICPBiCGStab:  Solving for p, Initial residual = 0.999181, Final residual = 0.00669239, No Iterations 1
+time step continuity errors : sum local = 2.39758e+26, global = 5.59473e+14, cumulative = 5.5947e+14
+[iZ6wej1artv0n1hqcx94jpZ:27313] *** Process received signal ***
+[iZ6wej1artv0n1hqcx94jpZ:27313] Signal: Floating point exception (8)
+[iZ6wej1artv0n1hqcx94jpZ:27313] Signal code:  (-6)
+[iZ6wej1artv0n1hqcx94jpZ:27313] Failing at address: 0x6ab1
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f1d121a6f20]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f1d121a6e97]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 2] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f1d121a6f20]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 3] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZN4Foam19GaussSeidelSmoother6smoothERKNS_4wordERNS_5FieldIdEERKNS_9lduMatrixERKS5_RKNS_10FieldFieldIS4_dEERKNS_8UPtrListIKNS_17lduInterfaceFieldEEEhi+0x425)[0x7f1d135955f5]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 4] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZNK4Foam19GaussSeidelSmoother6smoothERNS_5FieldIdEERKS2_hi+0x28)[0x[iZ6wej1artv0n1hqcx94jpZ:27309] *** Process received signal ***
+7f1d135959c8]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 5] [iZ6wej1artv0n1hqcx94jpZ:27309] Signal: Floating point exception (8)
+[iZ6wej1artv0n1hqcx94jpZ:27309] Signal code:  (-6)
+[iZ6wej1artv0n1hqcx94jpZ:27309] Failing at address: 0x6aad
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f91cc011f20]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f91cc011e97]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 2] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f91cc011f20]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 3] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(/opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZN4Foam19GaussSeidelSmoother6smoothERKNS_4wordERNS_5FieldIdEERKNS_9lduMatrixERKS5_RKNS_10FieldFieldIS4_dEERKNS_8UPtrListIKNS_17lduInterfaceFieldEEEhi+0x425)[0x7f91cd4005f5]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 4] _ZNK4Foam12smoothSolver5solveERNS_5FieldIdEERKS2_h+0x426)[0x7f1d1358d146]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 6] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZNK4Foam19GaussSeidelSmoother6smoothERNS_5FieldIdEERKS2_hi+0x28)[0x7f91cd4009c8]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 5] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZNK4Foam12smoothSolver5solveERNS_5FieldIdEERKS2_h+0x426)[0x7f91cd3f8146]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 6] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZN4Foam8fvMatrixIdE15solveSegregatedERKNS_10dictionaryE+0x17d)[0x7f1d15918ced]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 7] simpleFoam(_ZN4Foam8fvMatrixIdE5solveERKNS_10dictionaryE+0x15b)[0x55b2cfa65b0b]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 8] simpleFoam(_ZN4Foam8fvMatrixIdE5solveEv+0xda)[0x55b2cfa65e5a]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [ 9] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam5solveIdEENS_17SolverPerformanceIT_EERKNS_3tmpINS_8fvMatrixIS2_EEEE+0x2f)[0x7f1d16f3b04f]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [10] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam9RASModels15SpalartAllmarasINS_29IncompressibleTurbulenceModelINS_14transportModelEEEE7correctEv+0x5b0)[0x7f1d16fa05e0]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [11] simpleFoam(+0x26612)[0x55b2cfa29612]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [12] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f1d12189b97]
+[iZ6wej1artv0n1hqcx94jpZ:27313] [13] simpleFoam(+0x27f7a)[0x55b2cfa2af7a]
+[iZ6wej1artv0n1hqcx94jpZ:27313] *** End of error message ***
+/opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZN4Foam8fvMatrixIdE15solveSegregatedERKNS_10dictionaryE+0x17d)[0x7f91cf783ced]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 7] simpleFoam(_ZN4Foam8fvMatrixIdE5solveERKNS_10dictionaryE+0x15b)[0x55d310c47b0b]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 8] simpleFoam(_ZN4Foam8fvMatrixIdE5solveEv+0xda)[0x55d310c47e5a]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [ 9] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam5solveIdEENS_17SolverPerformanceIT_EERKNS_3tmpINS_8fvMatrixIS2_EEEE+0x2f)[0x7f91d0da604f]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [10] /opt/openfoam7/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so(_ZN4Foam9RASModels15SpalartAllmarasINS_29IncompressibleTurbulenceModelINS_14transportModelEEEE7correctEv+0x5b0)[0x7f91d0e0b5e0]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [11] simpleFoam(+0x26612)[0x55d310c0b612]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [12] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f91cbff4b97]
+[iZ6wej1artv0n1hqcx94jpZ:27309] [13] simpleFoam(+0x27f7a)[0x55d310c0cf7a]
+[iZ6wej1artv0n1hqcx94jpZ:27309] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 4 with PID 0 on node iZ6wej1artv0n1hqcx94jpZ exited on signal 8 (Floating point exception).
+--------------------------------------------------------------------------

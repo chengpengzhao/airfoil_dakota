@@ -1,0 +1,129 @@
+Dakota version 6.11 released Nov 15 2019.
+Repository revision c3efb375 (2019-11-07) built Dec 19 2019 17:01:04.
+Running serial Dakota executable in serial mode.
+Start time: Thu Dec 19 17:30:10 2019
+
+-----------------------
+Begin DAKOTA input file
+PARSEC_NACA0012.in
+-----------------------
+#  DAKOTA INPUT FILE - dakota_rosenbrock.in
+#  This sample Dakota input file optimizes the Rosenbrock function.
+#  See p. 95 in Practical Optimization by Gill, Murray, and Wright.
+
+################################################################################
+environment
+
+ tabular_data
+  tabular_data_file = 'dakota_output.dat'
+	#custom_annotated header eval_id	#No interface column
+################################################################################
+
+
+################################################################################
+method
+ soga
+  fitness_type
+    merit_function
+  replacement_type
+   elitist
+#unique_roulette_wheel roulette_wheel   favor_feasible
+  convergence_type
+   best_fitness_tracker
+   percent_change = 0.1
+   num_generations = 10
+  max_function_evaluations = 1000
+  population_size=100
+  print_each_pop
+  initialization_type
+   unique_random
+  crossover_type
+   multi_point_parameterized_binary = 2
+   crossover_rate = 0.9
+  mutation_type
+   bit_random
+    mutation_rate = 0.05
+  seed = 54321
+  convergence_tolerance =1.e-4
+
+ final_solutions = 3
+ output
+  silent
+################################################################################
+
+
+################################################################################
+variables
+ continuous_design = 11
+  descriptors = 'rle_suc' 'rle_pre' 'x_suc' 'y_suc' 'x_pre' 'y_pre' 'd2ydx2_suc' 'd2ydx2_pre' 'yte' 'th_suc' 'th_pre'
+
+
+
+
+
+
+
+
+
+# ±20% NACA0012
+
+  initial_point = 0.0147 0.0147 0.3015 0.0599 0.2996 -0.06 -0.436 0.4406 0 -7.335 7.335
+  lower_bounds = 0.0118 0.0118 0.2732 0.0479 0.2694 -0.072 -0.5232 0.3525 -0.03 -8.802 5.868
+  upper_bounds = 0.0176 0.0176 0.3618 0.0719 0.3595 -0.048 -0.3488 0.5287 0.03 -5.868 8.802
+
+
+#  initial_point = 0.0147 0.0147 0.3015 0.0599 0.2996 -0.06 -0.436 0.4406 0 -7.335 7.335
+#  lower_bounds = 0.0118 0.0118 0.2412 0.0479 0.2397 -0.072 -0.5232 0.3525 -0.03 -8.802 5.868
+#  upper_bounds = 0.0176 0.0176 0.3618 0.0719 0.3595 -0.048 -0.3488 0.5287 0.03 -5.868 8.802
+################################################################################
+
+
+################################################################################
+interface
+# asynchronous
+# evaluation_concurrency = 1
+ analysis_drivers = 'simulator_script'
+  fork
+   parameters_file = 'params.in'
+   results_file = 'results.out'
+   work_directory
+    directory_tag
+    directory_save
+    named = 'workdir'
+    copy_files = 'templatedir/*'
+    link_files = 'templatedir/*'
+
+   file_save
+   file_tag
+
+   aprepro
+
+# when using conmin_frcg (above) with analytic_gradients (below), 
+# need to turn off the active set vector as the interface does not parse it.
+## 	  deactivate active_set_vector
+################################################################################
+
+
+################################################################################	  
+responses
+ objective_functions = 1
+
+ descriptors = 'CdCl'
+
+
+ no_hessians
+ no_gradients
+
+################################################################################
+
+
+---------------------
+End DAKOTA input file
+---------------------
+
+Using Dakota input file 'PARSEC_NACA0012.in'
+Writing new restart file 'dakota.rst'.
+
+>>>>> Executing environment.
+
+>>>>> Running soga iterator.
