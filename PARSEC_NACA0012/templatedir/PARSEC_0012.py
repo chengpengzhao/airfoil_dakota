@@ -132,7 +132,7 @@ basevs = [Vertex(x10 - L1, 0, 0, 'v0'),
           Vertex(1, L1, 0, 'v6'),
           Vertex(x10, L1, 0, 'v7'),
           Vertex(0, 0, 0, 'v8'),
-          Vertex(1, 0, 0, 'v9'),
+          Vertex(1, yte, 0, 'v9'),
           Vertex(x10, y10, 0, 'v10'),
           Vertex(x11, y11, 0, 'v11'),
           ]
