@@ -22,6 +22,9 @@ decomposePar;
 mpirun --allow-run-as-root -np 12 simpleFoam -parallel | tee solve.log;
 reconstructPar -constant;
 #pyFoamPlotWatcher.py --progress solve.log;
+rm -r processor*
+mv 2000 result
+rm -rf *[0-9]*
 cd ..
 cd ..
 python3 readClCd.py;

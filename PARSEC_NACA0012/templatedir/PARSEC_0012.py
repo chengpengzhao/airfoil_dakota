@@ -174,7 +174,7 @@ def vnamegen(x0z0, x1z0, x1z1, x0z1):
 
 # create blocks
 # airfoil to far field
-yCells =   22*1
+yCells =   62*3
 yGrading = 500
 # https://turbmodels.larc.nasa.gov/naca0012numerics_grids.html
 xCell_total = int(yCells*2/(1.49))
