@@ -9,12 +9,25 @@ import matplotlib.pyplot as plt
 
 
 # ========================================================================================
-def replaceAll(file,searchExp,replaceExp):
-    for line in fileinput.input(file, inplace=1):
-        if searchExp in line:
-            line = line.replace(searchExp,replaceExp)
-        sys.stdout.write(line)
+f = open('PARSEC.in', 'r')
+line = f.readline()
+line = line.strip()
+columns = line.split()
+# ========================================================================================
 
+rle_suc = float(columns[0])
+rle_pre = float(columns[1])
+x_suc = float(columns[2])
+y_suc = float(columns[3])
+x_pre = float(columns[4])
+y_pre = float(columns[5])
+d2ydx2_suc = float(columns[6])
+d2ydx2_pre = float(columns[7])
+yte = float(columns[8])
+th_suc = float(columns[9])
+th_pre = float(columns[10])
+
+xte = 1.0 # Trailing edge x position
 def pcoef(
         xte, yte, rle,
         x_cre, y_cre, d2ydx2_cre, th_cre,
@@ -63,25 +76,13 @@ def pcoef(
 # ========================================================================================
 # Sample coefficients  NACA0012
 '''
-leading edge radius (r_le)
+leading edge radius (rle_suc rle_pre)
 pressure and suction surface crest locations (x_pre, y_pre, x_suc, y_suc)
 curvatures at the pressure and suction surface crest locations (d2y/dx2_pre, d2y/dx2_suc)
-trailing edge coordinates (y_te)
+trailing edge coordinates (x_TE, y_TE)
 trailing edge angles between the pressure and suction surface and the horizontal axis (th_pre, th_suc)
 '''
-rle_suc = .014927
-rle_pre = .014181
-x_suc = .29866
-y_suc = .059404
-x_pre = .29962
-y_pre = -0.059632
-d2ydx2_suc = -.42399
-d2ydx2_pre = 0.445281
-yte = 0
-th_suc = -7.672047
-th_pre = 7.59506
 
-xte = 1.0  # Trailing edge x position
 # Evaluate pressure (lower) surface coefficients
 cf_pre = pcoef(xte, yte, rle_pre,
                x_pre, y_pre, d2ydx2_pre, th_pre,
@@ -96,13 +97,13 @@ lowery = np.array([0] * len(x))
 for i in range(1, 7):
     uppery = uppery + cf_suc[i - 1] * x ** (i - 1 / 2)
     lowery = lowery + cf_pre[i - 1] * x ** (i - 1 / 2)
-
 # ========================================================================================
 # Plot this airfoil
-# plt.plot(x, uppery, 'o--', markerfacecolor='red')
-# plt.plot(x, lowery, 'o--', markerfacecolor='blue')
+#plt.plot(x, uppery, x, lowery)
+#plt.legend(loc='best')
+#plt.savefig("airfoil.png")
 # plt.gca().axis('equal')
-# plt.show()
+#plt.show()
 # ========================================================================================
 # create blockmesh
 # prepare ofblockmeshdicthelper.BlockMeshDict instance to
@@ -173,7 +174,7 @@ def vnamegen(x0z0, x1z0, x1z1, x0z1):
 
 # create blocks
 # airfoil to far field
-yCells =   62*3
+yCells =   22*1
 yGrading = 500
 # https://turbmodels.larc.nasa.gov/naca0012numerics_grids.html
 xCell_total = int(yCells*2/(1.49))
@@ -245,3 +246,5 @@ bmd.assign_vertexid()
 f = open('blockMeshDict', 'wb')
 f.write(bmd.format().encode())
 f.close()
+
+
