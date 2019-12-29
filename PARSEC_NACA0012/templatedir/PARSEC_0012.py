@@ -181,7 +181,7 @@ xCell_total = int(yCells*2/(1.49))
 
 # downstream
 xDCells = int(xCell_total*0.3)
-xDGrading = 10
+xDGrading = 100
 
 xCell_airfoil = int(xCell_total*0.7)
 # upstream
