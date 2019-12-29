@@ -41,13 +41,13 @@ forceCoeffs
     CofR            (0.25 0 0);
 
     // Lift direction
-    liftDir         (0 1 0);	//0deg
+    //liftDir         (0 1 0);	//0deg
     //liftDir         (-0.173648 0.984808 0);	//10deg
-    //liftDir         (-0.258819 0.965926 0);	//15deg
+    liftDir         (-0.258819 0.965926 0);	//15deg
     // Drag direction
-    dragDir         (1 0 0);	//0deg
+    //dragDir         (1 0 0);	//0deg
     //dragDir         (0.984808 0.173648 0);	//10deg
-    //dragDir         (0.965926 0.258819 0);	//15deg
+    dragDir         (0.965926 0.258819 0);	//15deg
     // Pitch axis
     pitchAxis       (0 0 1);
 
